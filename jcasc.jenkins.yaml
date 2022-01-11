@@ -41,8 +41,11 @@ license:
   certificate: ${licenseCert}
   key: ${licenseKey}
 unclassified:
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "https://${SUBDOMAIN}.${DOMAIN_NAME}/cjoc/"
   cloudbeesPlatform:
-    url: "https://cd.tsingkofer.ps.beescloud.com/"
+    url: ${cd_sso_url}
   usageStatisticsCloudBees:
     usageStatisticsCollected: false
 # credentials:
