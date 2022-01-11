@@ -44,9 +44,9 @@ license:
   certificate: ${licenseCert}
   key: ${licenseKey}
 unclassified:
-  # location:
-  #   adminAddress: "address not configured yet <nobody@nowhere>"
-  #   url: "https://ci.rogueone.ps.beescloud.com/cjoc/"
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "https://${CI_HOST_NAME}/cjoc/"
   cloudbeesPlatform:
     url: "${SDA_SSO_URL}"
   usageStatisticsCloudBees:
