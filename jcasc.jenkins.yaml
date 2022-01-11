@@ -4,6 +4,9 @@ jenkins:
   remotingSecurity:
     enabled: true
   securityRealm: "platformSso"
+  markupFormatter:
+    rawHtml:
+      disableSyntaxHighlighting: false
   primaryView:
     masters:
       jobFilters:
