@@ -48,7 +48,7 @@ unclassified:
     adminAddress: "address not configured yet <nobody@nowhere>"
     url: "https://ci.rogueone.ps.beescloud.com/cjoc/"
   cloudbeesPlatform:
-    url: "${CD_SSO_URL}"
+    url: "${SDA_SSO_URL}"
   usageStatisticsCloudBees:
     usageStatisticsCollected: false
 # credentials:
