@@ -43,9 +43,9 @@ license:
 unclassified:
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
-    url: "https://${SUBDOMAIN}.${DOMAIN_NAME}/cjoc/"
+    url: "https://ci.rogueone.ps.beescloud.com/cjoc/"
   cloudbeesPlatform:
-    url: ${cd_sso_url}
+    url: "https://cd.tsingkofer.ps.beescloud.com/"
   usageStatisticsCloudBees:
     usageStatisticsCollected: false
 # credentials:
