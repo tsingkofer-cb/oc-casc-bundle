@@ -5,7 +5,7 @@ groups:
   - name: Administrators
     members:
       users:
-        - rye
+        - tsingkofer
     roles:
       - name: administer-role
         grantedAt: current

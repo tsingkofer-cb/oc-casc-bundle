@@ -8,9 +8,7 @@ jcasc:
 plugins:
 - "plugins.yaml"
 items:
-- "items.root.yaml"
-- "items.releases.yaml"
-# Teams folders for RBAC demo. Uncomment as desired.
-#- "items.teams.yaml"
+# - "items.root.yaml"
+- "items.teams.yaml"
 rbac:
 - "rbac.yaml"

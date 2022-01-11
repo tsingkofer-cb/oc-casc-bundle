@@ -3,33 +3,7 @@ jenkins:
   numExecutors: 1
   remotingSecurity:
     enabled: true
-  securityRealm:
-    local:
-      users:
-        - id: "rye"
-          name: "Rye Carrigan"
-          password: ${decodeBase64:${adminPassword}}
-          properties:
-            - blueSteelRedirectOptOutProperty:
-                optOut: true
-            - mailer:
-                emailAddress: "rcarrigan@cloudbees.com"
-        - id: "orange"
-          name: "Orange Demo"
-          password: ${decodeBase64:${demoPassword}}
-          properties:
-            - blueSteelRedirectOptOutProperty:
-                optOut: true
-            - mailer:
-                emailAddress: "rcarrigan+orange@cloudbees.com"
-        - id: "purple"
-          name: "Purple Demo"
-          password: ${decodeBase64:${demoPassword}}
-          properties:
-            - blueSteelRedirectOptOutProperty:
-                optOut: true
-            - mailer:
-                emailAddress: "rcarrigan+purple@cloudbees.com"
+  securityRealm: "platformSso"
   primaryView:
     masters:
       jobFilters:
@@ -67,26 +41,23 @@ license:
   certificate: ${licenseCert}
   key: ${licenseKey}
 unclassified:
-  gitHubPluginConfig:
-    configs:
-      - credentialsId: "github-token"
-        name: "GitHub"
-    hookUrl: "$JENKINS_BASE_URL/github-webhook/"
+  cloudbeesPlatform:
+    url: "https://cd.tsingkofer.ps.beescloud.com/"
   usageStatisticsCloudBees:
     usageStatisticsCollected: false
-credentials:
-  system:
-    domainCredentials:
-      - credentials:
-          - basicSSHUserPrivateKey:
-              id: "github-key"
-              privateKeySource:
-                directEntry:
-                  privateKey: ${githubKey}
-              scope: GLOBAL
-              username: "github-key"
-              usernameSecret: true
-          - string:
-              id: "github-token"
-              scope: GLOBAL
-              secret: ${githubToken}
+# credentials:
+#   system:
+#     domainCredentials:
+#       - credentials:
+#           - basicSSHUserPrivateKey:
+#               id: "github-key"
+#               privateKeySource:
+#                 directEntry:
+#                   privateKey: ${githubKey}
+#               scope: GLOBAL
+#               username: "github-key"
+#               usernameSecret: true
+#           - string:
+#               id: "github-token"
+#               scope: GLOBAL
+#               secret: ${githubToken}

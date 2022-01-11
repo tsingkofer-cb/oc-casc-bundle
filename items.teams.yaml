@@ -4,71 +4,30 @@ removeStrategy:
 
 items:
 - kind: folder
-  displayName: team-purple
-  name: team-purple
-  description: "Controllers for Team Purple's projects"
-  groups:
-    - name: 'team-purple-int'
-      members:
-        external_groups:
-          - 'team-purple-ext'
-        users:
-          - 'purple'
-      roles:
-        - name: 'developer-role'
-          grantedAt: 'current'
-          propagates: 'true'
+  displayName: team-controllers
+  name: team-controllers
+  description: "Controllers for team projects"
+  # groups:
+  #   - name: 'team-purple-int'
+  #     members:
+  #       external_groups:
+  #         - 'team-purple-ext'
+  #       users:
+  #         - 'purple'
+  #     roles:
+  #       - name: 'developer-role'
+  #         grantedAt: 'current'
+  #         propagates: 'true'
   items:
     - kind: managedController
-      displayName: "Team Purple's Controller 1"
-      name: team-purple-1
+      displayName: "Controller 1"
+      name: team-controller-1
       configuration:
         kubernetes:
-          image: "CloudBees CI - Managed Master - 2.303.2.6"
-      properties:
-        - configurationAsCode:
-            bundle: items-example
-    - kind: managedController
-      displayName: "Team Purple's Controller 2"
-      name: team-purple-2
-      configuration:
-        kubernetes:
-          image: "CloudBees CI - Managed Master - 2.303.2.6"
+          image: "CloudBees CI - Managed Master - 2.319.1.5"
       properties:
         - configurationAsCode:
             bundle: items-example
 
-- kind: folder
-  displayName: team-orange
-  name: team-orange
-  description: "Controllers for Team Orange's projects"
-  groups:
-    - name: 'team-orange-int'
-      members:
-        external_groups:
-          - 'team-orange-ext'
-        users:
-          - 'orange'
-      roles:
-        - name: 'developer-role'
-          grantedAt: 'current'
-          propagates: 'true'
-  items:
-    - kind: managedController
-      displayName: "Team Orange's Controller 1"
-      name: team-orange-1
-      configuration:
-        kubernetes:
-          image: "CloudBees CI - Managed Master - 2.303.2.6"
-      properties:
-        - configurationAsCode:
-            bundle: items-example
-    - kind: managedController
-      displayName: "Team Orange's Controller 2"
-      name: team-orange-2
-      configuration:
-        kubernetes:
-          image: "CloudBees CI - Managed Master - 2.303.2.6"
-      properties:
-        - configurationAsCode:
-            bundle: items-example
+
+
