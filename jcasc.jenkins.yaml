@@ -62,6 +62,12 @@ unclassified:
     url: "${SDA_SSO_URL}"
   usageStatisticsCloudBees:
     usageStatisticsCollected: false
+  cascAutoControllerProvisioning:
+    provisionControllerOnCreation: true
+    fireAndForget: true
+    initialDelay: 15
+    timeout: 600
+    duration: 60
 # credentials:
 #   system:
 #     domainCredentials:
