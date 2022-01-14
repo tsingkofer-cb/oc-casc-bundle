@@ -9,6 +9,6 @@ plugins:
 - "plugins.yaml"
 items:
 # - "items.root.yaml"
-# - "items.teams.yaml"
+- "items.teams.yaml"
 rbac:
 - "rbac.yaml"
