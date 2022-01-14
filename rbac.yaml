@@ -5,6 +5,7 @@ groups:
   - name: Administrators
     members:
       users:
+        - tempadmin
         - tsingkofer
     roles:
       - name: administer-role
