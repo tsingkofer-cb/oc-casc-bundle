@@ -3,7 +3,18 @@ jenkins:
   numExecutors: 0
   remotingSecurity:
     enabled: true
-  securityRealm: "platformSso"
+  # securityRealm: "platformSso"
+  securityRealm:
+    local:
+      users:
+        - id: "tempadmin"
+          name: "Temporary Administrator"
+          password: ${decodeBase64:${adminPassword}}
+          properties:
+            - blueSteelRedirectOptOutProperty:
+                optOut: true
+            - mailer:
+                emailAddress: "tempadmin@cloudbees.com"
   markupFormatter:
     rawHtml:
       disableSyntaxHighlighting: false
