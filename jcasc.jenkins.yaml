@@ -1,6 +1,6 @@
 jenkins:
   authorizationStrategy: "cloudBeesRoleBasedAccessControl"
-  numExecutors: 0
+  numExecutors: 1
   remotingSecurity:
     enabled: true
   # securityRealm: "platformSso"
