@@ -1,8 +1,8 @@
 masterProvisioning:
   dockerImageDefinitionConfiguration:
     images:
-      - imageTag: "cloudbees/cloudbees-core-mm:2.319.1.5"
-        name: "CloudBees CI - Managed Master - 2.319.1.5"
+      - imageTag: "cloudbees/cloudbees-core-mm:2.319.2.5"
+        name: "CloudBees CI - Managed Master - 2.319.2.5"
   kubernetes:
     cpus: 2.0
     disk: 20
