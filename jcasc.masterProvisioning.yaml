@@ -1,9 +1,11 @@
 masterProvisioning:
-  dockerImageDefinitionConfiguration:
-    images:
-      - imageTag: "cloudbees/cloudbees-core-mm:2.319.2.5"
-        name: "CloudBees CI - Managed Master - 2.319.2.5"
   kubernetes:
+    clusterEndpoints:
+    - id: "default"
+      ingressAnnotations: |-
+        alb.ingress.kubernetes.io/group.name: cloudbees-ci-cloudbees-ci
+        alb.ingress.kubernetes.io/target-type: ip
+        alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
     cpus: 2.0
     disk: 20
     memory: 4G
