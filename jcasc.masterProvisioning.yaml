@@ -6,6 +6,9 @@ masterProvisioning:
         alb.ingress.kubernetes.io/group.name: cloudbees-ci-cloudbees-ci
         alb.ingress.kubernetes.io/target-type: ip
         alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}, {"HTTPS":443}]'
+      ingressClass: "alb"
+      jenkinsUrl: "http://cjoc.cloudbees-ci.svc.cluster.local/cjoc/"
+      name: "kubernetes"
     cpus: 2.0
     disk: 20
     memory: 4G
