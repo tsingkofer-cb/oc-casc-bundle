@@ -62,7 +62,22 @@ unclassified:
     url: "${SDA_SSO_URL}"
   usageStatisticsCloudBees:
     usageStatisticsCollected: false
-  cascAutoControllerProvisioning:
+  bundleStorageService:
+    activated: true
+    bundles:
+    - name: "cbci-casc-bundles"
+      retriever:
+        SCM:
+          defaultVersion: "usaf"
+          scmSource:
+            git:
+              id: "9cb8a0f7-995d-4ae6-9acb-cc712ce4b8d0"
+              remote: "https://github.com/tsingkofer-cb/cbci-casc-bundles"
+              traits:
+              - "gitBranchDiscovery"
+    pollingPeriod: 120
+    purgeOnDeactivation: false
+    cascAutoControllerProvisioning:
     provisionControllerOnCreation: true
     fireAndForget: true
     initialDelay: 15
